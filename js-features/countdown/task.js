@@ -9,25 +9,28 @@ let setHours = 0;
 let setMinutes = 0;
 let setSeconds = 59;
 
-const TIME_LIMIT = (setHours * 3600 + setMinutes * 60 + setSeconds);
-// либо:   const TIME_LIMIT = timer.textContent
+const timerInitialValue = (setHours * 3600 + setMinutes * 60 + setSeconds);
 
-let timePassed = 0;
-let timeLeft = TIME_LIMIT;
-let timerInterval = null;
+// либо, если нужно подхватить значение из файла task.html:
+// const timerInitialValue = timer.textContent
+
+let timeLeft = timerInitialValue;
+let intervalID = null;
 
 timer.textContent = formatTime(timeLeft);
 startTimer();
 
 function startTimer() {
-  timerInterval = setInterval(() => {
+  intervalID = setInterval(() => {
     if (timeLeft === 0) {
-      alert('Вы победили в конкурсе!');
-      clearInterval(timerInterval);
+      clearInterval(intervalID);
+      alert('Вы победили в конкурсе!' + '\n\n' +
+        'В качестве презента на Ваш компьютер будет загружена' + '\n' +
+        ' книга Льва Толстого "Анна Каренина" в формате fb2 ' + '\u{1F607}');
+      location.assign("http://tolstoy.ru/upload/iblock/144/anna-karenina.fb2");
     } else {
-      timePassed = timePassed += 1;
-    timeLeft = TIME_LIMIT - timePassed;
-    timer.textContent = formatTime(timeLeft);
+      timeLeft -= 1;
+      timer.textContent = formatTime(timeLeft);
     }
   }, 1000);
 }
