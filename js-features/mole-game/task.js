@@ -29,7 +29,7 @@ for (let i = 1; i <= 9; ++i) {
 
 function victoryOrDefeat() {
   if (deadCount === 5 && lostCount < 11) {
-    alert("Победа! Все кроты исстреблены " + "\u{1F642}");
+    alert("Победа! Все кроты истреблены " + "\u{1F642}");
   } else if (deadCount < 5 && lostCount === 11) {
     alert("Поражение. Кроты захватили город " + "\u{1F610}");
   }
