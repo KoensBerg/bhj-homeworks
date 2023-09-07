@@ -16,7 +16,7 @@ for (let i = 0; i < firstNaviTabs.length; i++) {
 }
 
 // Делаем все вкладки неактивными
-function getNonActive () {
+function getNonActive() {
   firstNaviTabs.forEach(e => e.className = 'tab');
   firstNaviTabContens.forEach(e => e.className = 'tab__content');
 }
