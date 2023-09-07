@@ -1,3 +1,7 @@
+// — — — — — — — — — — — — — — — — — — — — — — —
+// Задача 2 – Соло на клавиатуре
+// — — — — — — — — — — — — — — — — — — — — — — —
+
 class Game {
   constructor(container) {
     this.container = container;
