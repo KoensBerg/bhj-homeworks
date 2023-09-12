@@ -1,3 +1,7 @@
+// — — — — — — — — — — — — — — — — — — — — — — —
+// Задача 2 – Ротатор рекламы
+// — — — — — — — — — — — — — — — — — — — — — — —
+
 const rotatorCases = Array.from(document.querySelectorAll('.rotator__case'));
 let counter = 1;
 let delay = null;

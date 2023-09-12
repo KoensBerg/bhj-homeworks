@@ -1,3 +1,7 @@
+// — — — — — — — — — — — — — — — — — — — — — — —
+// Задача 1 – Онлайн-читалка
+// — — — — — — — — — — — — — — — — — — — — — — —
+
 const fontSizeElements = Array.from(document.querySelectorAll('.font-size'));
 const controlColorElements = Array.from(document.querySelector('.book__control_color').querySelectorAll('a'));
 const controlBackgroundElements = Array.from(document.querySelector('.book__control_background').querySelectorAll('a'));

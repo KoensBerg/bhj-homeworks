@@ -1,3 +1,7 @@
+// — — — — — — — — — — — — — — — — — — — — — — —
+// Задача 1 Появление элементов
+// — — — — — — — — — — — — — — — — — — — — — — —
+
 const revealElements = Array.from(document.querySelectorAll('.reveal'));
 
 for (let i = 0; i < revealElements.length; i++) {
