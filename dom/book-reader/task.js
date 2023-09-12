@@ -1,5 +1,5 @@
 // — — — — — — — — — — — — — — — — — — — — — — —
-// Задача 1 – Онлайн-читалка
+// Задача 3 – Онлайн-читалка
 // — — — — — — — — — — — — — — — — — — — — — — —
 
 const fontSizeElements = Array.from(document.querySelectorAll('.font-size'));
