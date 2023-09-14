@@ -1,3 +1,7 @@
+// — — — — — — — — — — — — — — — — — —
+// Задача 2 – Дерево интересов
+// — — — — — — — — — — — — — — — — — —
+
 const checkboxes = document.querySelectorAll('.interest__check');
 
 for (let i = 0; i < checkboxes.length; i++) {
