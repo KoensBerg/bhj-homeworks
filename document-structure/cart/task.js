@@ -14,7 +14,7 @@ for (let i = 0; i < products.length; i++) {
     e.preventDefault();
     const dataID = products[i].dataset.id;
     const quantityValue = products[i].querySelector('.product__quantity-value');
-    const productImg = products[i].querySelector('img')
+    const productImg = products[i].querySelector('img');
 
     // создадим карточку товара для корзины
     const cartProduct = document.createElement('div');
@@ -41,7 +41,7 @@ for (let i = 0; i < products.length; i++) {
       // проверим, есть ли в корзине добавляемый товар
       Array.from(cartProducts.children).forEach(item => {
 
-        // если добавляемый товар уже есть в корзине:
+        // если добавляемый товар уже есть в корзине
         if (item.dataset.id === dataID) {
           addedElement = item;
           
@@ -53,10 +53,10 @@ for (let i = 0; i < products.length; i++) {
         }
       });
 
-      // если товар не найден в корзине:
+      // если товар не найден в корзине
       if (!addedElement) cartProducts.appendChild(cartProduct);
     } 
-    // если корзина пустая:
+    // если корзина пустая
     else cartProducts.appendChild(cartProduct);
   })
 }
