@@ -12,7 +12,7 @@ recreateTaskList();
 // настроим ввод новой задачи
 tasksForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  
+
   if (taskInput.value) {
     createNewTask();
   }
@@ -53,6 +53,7 @@ function createNewTask() {
   });
 }
 
+
 // — — — — — — — — — — — — — — — — — —
 // Функция обновления localStorage
 // — — — — — — — — — — — — — — — — — —
@@ -60,6 +61,7 @@ function updateLocalStorage() {
   localStorage.clear();
   localStorage.setItem('tasksList.innerHTML', tasksList.innerHTML);
 }
+
 
 // — — — — — — — — — — — — — — — — — —
 // Функция восстановления задач из localStorage
