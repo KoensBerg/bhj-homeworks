@@ -3,7 +3,6 @@
 // — — — — — — — — — — — — — — — — — —
 
 const taskInput = document.getElementById('task__input');
-const tasksAdd = document.getElementById('tasks__add');
 const tasksList = document.getElementById('tasks__list');
 const tasksForm = document.getElementById('tasks__form');
 
@@ -12,8 +11,9 @@ recreateTaskList();
 
 // настроим ввод новой задачи
 tasksForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
   if (taskInput.value) {
-    e.preventDefault();
     createNewTask();
   }
 })
