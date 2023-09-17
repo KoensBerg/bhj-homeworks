@@ -12,7 +12,8 @@ taskInput.addEventListener('keypress', (event) => {
 });
 
 // ввод через кнопку "Добавить"
-tasksAdd.addEventListener('click', () => {
+tasksAdd.addEventListener('click', (event) => {
+  event.preventDefault();
   if (taskInput.value) createNewTask();
 });
 
@@ -22,7 +23,7 @@ tasksAdd.addEventListener('click', () => {
 // — — — — — — — — — — — — — — — — — —
 
 function createNewTask() {
-  let newTask = document.createElement('div');
+  const newTask = document.createElement('div');
 
   // создадим новую задачу
   newTask.classList.add('task');
