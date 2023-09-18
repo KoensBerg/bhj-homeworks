@@ -42,22 +42,16 @@ for (let i = 0; i < products.length; i++) {
       cartProducts.appendChild(cartProduct);
     }
 
-    // если в корзине есть какие-то товары
-    if (cartProducts.children.length) {
-      // найдём в корзине добавляемый товар
-      const productInCart = Array.from(cartProducts.children).find(item => item.dataset.id === dataID);
+    // найдём в корзине добавляемый товар
+    const productInCart = Array.from(cartProducts.children).find(item => item.dataset.id === dataID);
 
-      // если карточка товара присутствует в корзине
-      if (productInCart) {
-        let currentQuentity = +(productInCart.querySelector('.cart__product-count').textContent);
-        let addedQuentity = +(quantityValue.textContent);
+    // если карточка товара присутствует в корзине
+    if (productInCart) {
+      let currentQuentity = +(productInCart.querySelector('.cart__product-count').textContent);
+      let addedQuentity = +(quantityValue.textContent);
 
-        // увеличим количество позиций товара в корзине
-        productInCart.querySelector('.cart__product-count').textContent = currentQuentity + addedQuentity;
-      } else {
-        // иначе добавим карточку товара в корзину
-        addCardProductToCart();
-      }
+      // увеличим количество позиций товара в корзине
+      productInCart.querySelector('.cart__product-count').textContent = currentQuentity + addedQuentity;
     } else {
       // иначе добавим карточку товара в корзину
       addCardProductToCart();
