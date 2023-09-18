@@ -36,34 +36,31 @@ for (let i = 0; i < products.length; i++) {
 
     // если в корзине есть какие-то товары
     if (cartProducts.children.length) {
-      let addedElement = null;
+      // найдём в корзине добавляемый товар
+      const productInCart = Array.from(cartProducts.children).find(item => item.dataset.id === dataID);
 
-      // проверим, есть ли в корзине добавляемый товар
-      Array.from(cartProducts.children).forEach(item => {
+      // если карточка товара присутствует в корзине
+      if (productInCart) {
+        let currentQuentity = +(productInCart.querySelector('.cart__product-count').textContent);
+        let addedQuentity = +(quantityValue.textContent);
 
-        // если добавляемый товар уже есть в корзине
-        if (item.dataset.id === dataID) {
-          addedElement = item;
-          
-          let currentQuentity = +(addedElement.querySelector('.cart__product-count').textContent);
-          let addedQuentity = +(quantityValue.textContent);
-          
-          // добавим дополнительное количество товара
-          addedElement.querySelector('.cart__product-count').textContent = currentQuentity + addedQuentity;
-        }
-      });
-
-      // если товар не найден в корзине
-      if (!addedElement) cartProducts.appendChild(cartProduct);
-    } 
-    // если корзина пустая
-    else cartProducts.appendChild(cartProduct);
+        // увеличим количество позиций товара в корзине
+        productInCart.querySelector('.cart__product-count').textContent = currentQuentity + addedQuentity;
+      } else {
+        // иначе добавим карточку товара в корзину
+        cartProducts.appendChild(cartProduct);
+      }
+    }
+    else {
+      // иначе добавим карточку товара в корзину
+      cartProducts.appendChild(cartProduct);
+    }
   })
 }
 
 
 // — — — — — — — — — — — — — — — — — —
-// Изменим количество единиц товара
+// Изменим количество в карточке товара
 // — — — — — — — — — — — — — — — — — —
 for (let i = 0; i < products.length; i++) {
   let currentQuentity;
@@ -84,7 +81,8 @@ for (let i = 0; i < products.length; i++) {
     e.preventDefault();
     currentQuentity = +(quantityValue.textContent);
 
-    if (currentQuentity > 1)
-    quantityValue.textContent = currentQuentity - 1;
+    if (currentQuentity > 1) {
+      quantityValue.textContent = currentQuentity - 1;
+    }
   });
 }
