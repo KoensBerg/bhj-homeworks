@@ -74,9 +74,11 @@ function updateLocalStorage() {
 // Функция восстановления задач из localStorage
 // — — — — — — — — — — — — — — — — — — — — — — —
 function recreateTaskList() {
-  const tasksTitlesArray = localStorage.tasksTitlesArray.split(',');
+  if (localStorage.tasksTitlesArray) {
+    const tasksTitlesArray = localStorage.tasksTitlesArray.split(',');
 
-  if (tasksTitlesArray.length) {
-    tasksTitlesArray.forEach(e => createNewTask(e));
-  }
+    if (tasksTitlesArray.length) {
+      tasksTitlesArray.forEach(e => createNewTask(e));
+    }
+  } 
 }
