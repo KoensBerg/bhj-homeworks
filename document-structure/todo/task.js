@@ -12,24 +12,25 @@ recreateTaskList();
 // настроим ввод новой задачи
 tasksForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  const taskValue = taskInput.value.trim();
 
-  if (taskInput.value) {
-    createNewTask();
+  if (taskValue) {
+    createNewTask(taskValue);
   }
-})
+});
 
 
 // — — — — — — — — — — — — — — — — — —
 // Функция создания новой задачи
 // — — — — — — — — — — — — — — — — — —
-function createNewTask() {
+function createNewTask(taskValue) {
   const newTask = document.createElement('div');
 
   // создадим новую задачу
   newTask.classList.add('task');
   newTask.innerHTML = `
   <div class="task__title">
-    ${taskInput.value}
+    ${taskValue}
   </div>
   <a href="#" class="task__remove">&times;</a>
   `;
@@ -58,28 +59,24 @@ function createNewTask() {
 // Функция обновления localStorage
 // — — — — — — — — — — — — — — — — — —
 function updateLocalStorage() {
-  localStorage.clear();
-  localStorage.setItem('tasksList.innerHTML', tasksList.innerHTML);
+  const tasksTitlesArray =[];
+  const taskTitles = tasksList.querySelectorAll('.task__title');
+
+  if (taskTitles.length > 0) {
+    Array.from(taskTitles).forEach(e => tasksTitlesArray.unshift(e.innerText));
+  }
+
+  localStorage.setItem('tasksTitlesArray', tasksTitlesArray);
 }
 
 
-// — — — — — — — — — — — — — — — — — —
+// — — — — — — — — — — — — — — — — — — — — — — —
 // Функция восстановления задач из localStorage
-// — — — — — — — — — — — — — — — — — —
+// — — — — — — — — — — — — — — — — — — — — — — —
 function recreateTaskList() {
-  if (localStorage['tasksList.innerHTML']) {
-    tasksList.innerHTML = localStorage['tasksList.innerHTML'];
-  }
-  
-  if (tasksList.children.length) {
-    const tasks = document.querySelectorAll('.task');
+  const tasksTitlesArray = localStorage.tasksTitlesArray.split(',');
 
-    for (let i = 0; i < tasks.length; i++) {
-      tasks[i].lastElementChild.addEventListener('click', (e) => {
-        e.preventDefault();
-        tasks[i].remove();
-        updateLocalStorage();
-      });
-    }
+  if (tasksTitlesArray.length) {
+    tasksTitlesArray.forEach(e => createNewTask(e));
   }
 }
