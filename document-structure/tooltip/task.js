@@ -2,30 +2,33 @@
 // Задача 1 – Всплывающая подсказка
 // — — — — — — — — — — — — — — — — — — — — — — —
 
-let tooltip = document.createElement('div');
-tooltip.classList.add("tooltip");
+const tooltip = document.createElement('div');
+tooltip.classList.add('tooltip');
 
-const hasTooltips = document.querySelectorAll('.has-tooltip');
-hasTooltips[0].insertAdjacentElement("afterend", tooltip);
+const linksWithTips = document.querySelectorAll('.has-tooltip');
+linksWithTips[0].insertAdjacentElement('afterend', tooltip);
 
-// активируем подсказку
-for (let i = 0; i < hasTooltips.length; i++) {
-  hasTooltips[i].addEventListener('mouseover', () => {
+let activeLinkIndex = -1;
 
-    // получим координаты элемента
-    let left = hasTooltips[i].getBoundingClientRect().left;
-    let bottom = hasTooltips[i].getBoundingClientRect().bottom;
+// настроим действие по клику
+for (let i = 0; i < linksWithTips.length; i++) {
+  linksWithTips[i].addEventListener('click', (e) => {
+    e.preventDefault();
 
-    tooltip.style = `left: ${left}px; top: ${bottom}px`;
-    tooltip.classList.add("tooltip_active");
-    tooltip.innerText = hasTooltips[i].title;
-  });
-}
+    if (linksWithTips[i] === activeLinkIndex) {
+      tooltip.classList.remove('tooltip_active');
+      activeLinkIndex = -1;
+    } else {
+      // получим координаты элемента с линком
+      let left = linksWithTips[i].getBoundingClientRect().left;
+      let bottom = linksWithTips[i].getBoundingClientRect().bottom;
 
+      // активируем подсказку
+      tooltip.style = `left: ${left}px; top: ${bottom}px`;
+      tooltip.innerText = linksWithTips[i].title;
+      tooltip.classList.add('tooltip_active');
 
-// деактивируем подсказку
-for (let i = 0; i < hasTooltips.length; i++) {
-  hasTooltips[i].addEventListener('mouseout', () => {
-    tooltip.classList.remove("tooltip_active");
+      activeLinkIndex = linksWithTips[i];
+    }
   });
 }
