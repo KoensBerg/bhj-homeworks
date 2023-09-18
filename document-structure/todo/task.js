@@ -59,7 +59,7 @@ function createNewTask(taskValue) {
 // Функция обновления localStorage
 // — — — — — — — — — — — — — — — — — —
 function updateLocalStorage() {
-  const tasksTitlesArray =[];
+  const tasksTitlesArray = [];
   const taskTitles = tasksList.querySelectorAll('.task__title');
 
   if (taskTitles.length > 0) {
