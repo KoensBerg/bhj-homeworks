@@ -83,7 +83,6 @@ function updateLocalStorage() {
       exchangeRatesArray.push({ CharCode, Value });
     }
 
-    console.log(exchangeRatesArray);
     localStorage.setItem('exchangeRatesArray', JSON.stringify(exchangeRatesArray));
   }
 }
@@ -95,7 +94,6 @@ function updateLocalStorage() {
 function recreateValutesList() {
   if (localStorage.exchangeRatesArray) {
     const exchangeRatesArray = JSON.parse(localStorage.exchangeRatesArray);
-    console.log(exchangeRatesArray);
 
     if (exchangeRatesArray.length) {
       items.innerHTML = '';
