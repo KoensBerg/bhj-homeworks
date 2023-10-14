@@ -7,7 +7,6 @@ const pollAnswers = document.getElementById('poll__answers');  // блок с о
 
 function newRequest() {
   const xhr = new XMLHttpRequest();
-
   xhr.open('GET', 'https://students.netoservices.ru/nestjs-backend/poll');
   xhr.send();
 
@@ -19,14 +18,14 @@ function newRequest() {
       const answers = newPoll.data.answers; // извлечём данные о вариантах ответов
 
       pollTitle.textContent = '';
-      pollAnswers.textContent = '';
+      pollAnswers.innerHTML = '';
 
       pollTitle.textContent = title;
 
       answers.forEach(answer => {
         const element = document.createElement('button');
         element.className = 'poll__answer';
-        element.style = "margin-right: 5px";
+        element.style = 'margin-right: 5px';
         element.textContent = answer;
 
         pollAnswers.appendChild(element);
