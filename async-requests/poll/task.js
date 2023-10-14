@@ -58,7 +58,7 @@ function newRequest() {
 // Функция выводит результаты опроса
 // — — — — — — — — — — — — — — — — — — —
 function showStat(vote, index) {
-  const xhr = new XMLHttpRequest;
+  const xhr = new XMLHttpRequest();
 
   xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/poll');
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
