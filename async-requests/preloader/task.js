@@ -18,7 +18,7 @@ xhr.send();
 
 xhr.onload = function () {
   // если от сервера получен корректный ответ
-  if (xhr.status = 200) {
+  if (xhr.status === 200) {
     items.innerHTML = ''; // очистим старый список
     imgLoader.classList.remove('loader_active'); // удалим индикатор загрузки
 
