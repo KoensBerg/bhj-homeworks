@@ -28,7 +28,7 @@ formElement.addEventListener('submit', (e) => {
   });
 
   // отслеживаем результат (вариант 2)
-  xhr.onloadend = function() {
+  xhr.onloadend = function () {
     if (xhr.status == 201) {
       console.log('xhr.response:', xhr.response);
     } else {
