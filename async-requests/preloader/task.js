@@ -11,7 +11,7 @@ recreateValutesList();
 
 
 // отправим запрос на получение свежих курсов валют
-let xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://students.netoservices.ru/nestjs-backend/slow-get-courses');
 xhr.send();
 
