@@ -78,7 +78,6 @@ function showWelcome() {
   logoutBtn.addEventListener('click', (e) => {
     e.preventDefault();
     delete localStorage.user_id;  // очистим localStorage
-    logoutBtn.classList.add('hidden');  // скроем кнопку logout
     welcome.classList.remove('welcome_active');  // скроем блок приветствия
     signinWrapper.classList.add('signin_active');  // покажем форму авторизации
   });
