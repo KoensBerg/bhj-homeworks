@@ -2,46 +2,46 @@
 
 ## Блок 1. Основы разработки интерфейсов
 
-### 1. [Возможности JavaScript в браузере](./js-features/)
+### [Возможности JavaScript в браузере](./js-features/)
   - [Таймер обратного отсчёта](./js-features/countdown)
   - [Игра-кликер](./js-features/cookie-clicker)
   - [Игра «Убей кротов»](./js-features/mole-game)
 
-### 2. [Способы поиска нужного HTML-элемента](./element-search/)
+### [Способы поиска нужного HTML-элемента](./element-search/)
   - [Всплывающие окна](./element-search/popups)
   - [Навигационное меню](./element-search/menu)
   - [Слайдер](./element-search/slider)
 
-### 3. [Объект события](./event-object/)
+### [Объект события](./event-object/)
   - [Выпадающие списки](./event-object/dropdown)
   - [Соло на клавиатуре](./event-object/keysolo)
   - [Управление вкладками](./event-object/tabs)
 
 ## Блок 2. Работа с DOM
 
-### 4. [DOM](./dom/)
+### [DOM](./dom/)
   - [Появление элементов при прокрутке](./dom/reveal)
   - [Ротатор рекламы](./dom/ads)
   - [Онлайн-читалка](./dom/book-reader)
 
-### 5. [Работа с HTML-формами](./html-forms/)
+### [Работа с HTML-формами](./html-forms/)
   - [Текстовый чат](./html-forms/chat)
   - [Дерево интересов](./html-forms/interests)
   - [Выпадающий список с поиском](./html-forms/autocomplete)
 
-### 6. [Изменение структуры HTML-документа](./document-structure/)
+### [Изменение структуры HTML-документа](./document-structure/)
   - [Всплывающая подсказка](./document-structure/tooltip)
   - [Простой список дел](./document-structure/todo)
   - [Корзина товаров](./document-structure/cart)
 
 ## Блок 3. Работа с состоянием
 
-### 7. [Асинхронные запросы](./async-requests/)
+### [Асинхронные запросы](./async-requests/)
   - [Анимация загрузки данных](./async-requests/preloader)
   - [Опрос с выбором результатов](./async-requests/poll)
   - [Загрузка больших файлов](./async-requests/progressbar)
 
-### 8. [Хранение состояния на клиенте](./client-state/)
+### [Хранение состояния на клиенте](./client-state/)
   - [Текстовый редактор](./client-state/text-editor)
   - [Всплывающее окно](./client-state/popup/)
   - [Авторизация](./client-state/auth/)
