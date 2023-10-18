@@ -10,6 +10,7 @@ const signinBtn = document.getElementById('signin__btn');
 // элементы блока приветствия
 const welcome = document.getElementById('welcome');
 const userID = document.getElementById('user_id');
+const logoutBtn = document.getElementById('logout__btn');
 
 
 // проверим localStorage
@@ -72,10 +73,6 @@ function idRestore() {
 function showWelcome() {
   signinWrapper.classList.remove('signin_active');  // скроем форму авторизации
   welcome.classList.add('welcome_active');  // покажем блок приветствия
-
-  // добавим кнопку logout
-  const logoutBtn = document.getElementById('logout__btn');
-  logoutBtn.classList.remove('hidden');
 
   // нажатие на кнопку logout
   logoutBtn.addEventListener('click', (e) => {
