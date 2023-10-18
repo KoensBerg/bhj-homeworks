@@ -3,26 +3,26 @@
 ## Блок 1. Основы разработки интерфейсов
 
 ### 1. [Возможности JavaScript в браузере](./js-features/)
-  [Таймер обратного отсчёта](./js-features/countdown)
-  [Игра-кликер](./js-features/cookie-clicker)
-  [Игра «Убей кротов»](./js-features/mole-game)
+  - [Таймер обратного отсчёта](./js-features/countdown)
+  - [Игра-кликер](./js-features/cookie-clicker)
+  - [Игра «Убей кротов»](./js-features/mole-game)
 
 ### 2. [Способы поиска нужного HTML-элемента](./element-search/)
-  [Всплывающие окна](./element-search/popups)
-  [Навигационное меню](./element-search/menu)
-  [Слайдер](./element-search/slider)
+  - [Всплывающие окна](./element-search/popups)
+  - [Навигационное меню](./element-search/menu)
+  - [Слайдер](./element-search/slider)
 
 ### 3. [Объект события](./event-object/)
-  [Выпадающие списки](./event-object/dropdown)
-  [Соло на клавиатуре](./event-object/keysolo)
-  [Управление вкладками](./event-object/tabs)
+  - [Выпадающие списки](./event-object/dropdown)
+  - [Соло на клавиатуре](./event-object/keysolo)
+  - [Управление вкладками](./event-object/tabs)
 
 ## Блок 2. Работа с DOM
 
 ### 4. [DOM](./dom/)
-  [Появление элементов при прокрутке](./dom/reveal)
-  [Ротатор рекламы](./dom/ads)
-  [Онлайн-читалка](./dom/book-reader)
+  - [Появление элементов при прокрутке](./dom/reveal)
+  - [Ротатор рекламы](./dom/ads)
+  - [Онлайн-читалка](./dom/book-reader)
 
 ### 5. [Работа с HTML-формами](./html-forms/)
 
