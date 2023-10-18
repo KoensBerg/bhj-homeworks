@@ -2,7 +2,10 @@
 
 ## Блок 1. Основы разработки интерфейсов
 
-#### 1.1. [Возможности JavaScript в браузере.](./js-features/)  
+#### [Возможности JavaScript в браузере.](./js-features/)
+  1. [Таймер обратного отсчёта](./js-features/countdown)
+  2. [Игра-кликер](./js-features/cookie-clicker)
+  3. [Игра «Убей кротов»](./js-features/mole-game)
 
 #### 1.2. [Способы поиска нужного HTML-элемента.](./element-search/)
 
