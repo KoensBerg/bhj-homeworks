@@ -26,7 +26,7 @@ reset.addEventListener('click', (e) => {
 
 // Функция восстанавливает данные из localStorage
 function restorEditor() {
-  if (localStorage.editor && localStorage.editor.length) {
+  if (localStorage.editor) {
     try {
       editor.value = JSON.parse(localStorage.getItem('editor'));
     } catch(e) {
