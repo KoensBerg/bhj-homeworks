@@ -37,8 +37,14 @@
 ## Блок 3. Работа с состоянием
 
 ### 7. [Асинхронные запросы](./async-requests/)
+  - [Анимация загрузки данных](./async-requests/preloader)
+  - [Опрос с выбором результатов](./async-requests/poll)
+  - [Загрузка больших файлов](./async-requests/progressbar)
 
-### 8. [Хранение состояния на клиенте](./client-state)
+### 8. [Хранение состояния на клиенте](./client-state/)
+  - [Текстовый редактор](./client-state/text-editor)
+  - [Всплывающее окно](./client-state/popup/)
+  - [Авторизация](./client-state/auth/)
 
 ## Требования
 
