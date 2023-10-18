@@ -43,5 +43,13 @@
 
 .welcome_active {
   display: block;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.logout {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
 }

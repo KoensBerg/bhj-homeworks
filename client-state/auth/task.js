@@ -2,19 +2,17 @@
 // Задача 3 – Авторизация
 // — — — — — — — — — — — — — — — — —
 
-// форма авторизации
+// элементы формы авторизации
 const signinWrapper = document.getElementById('signin');
 const signinForm = document.getElementById('signin__form');
 const signinBtn = document.getElementById('signin__btn');
 
-// блок приветствия
+// элементы блока приветствия
 const welcome = document.getElementById('welcome');
 const userID = document.getElementById('user_id');
 
 
-// — — — — — — — — — — — — — — — — — — — — —
-// Восстановим 'user_id' из localStorage
-// — — — — — — — — — — — — — — — — — — — — —
+// проверим localStorage
 idRestore();
 
 
@@ -39,10 +37,9 @@ signinBtn.addEventListener('click', (e) => {
 
       // если авторизация прошла успешно
       if (responseParse.success) {
+        showWelcome()  // покажем блок приветствия
+        userID.textContent = responseParse.user_id;  // укажем user_id
         localStorage.user_id = responseParse.user_id;  // запомним user_id
-        signinWrapper.classList.remove('signin_active');  // скроем форму авторизации
-        welcome.classList.add('welcome_active');  // покажем блок приветствия
-        userID.textContent = responseParse.user_id;  // укажем user_id в форме приветствия
       } else {
         alert('Неверный логин/пароль');
       }
@@ -56,15 +53,36 @@ signinBtn.addEventListener('click', (e) => {
 });
 
 
-// — — — — — — — — — — — — — — — — — — — — — — — — — —
-// Функция восстанавливает 'user_id' из localStorage
-// — — — — — — — — — — — — — — — — — — — — — — — — — —
+// — — — — — — — — — — — — — — — — — — —
+// Функция восстанавливает 'user_id'
+// — — — — — — — — — — — — — — — — — — —
 function idRestore() {
   if (localStorage.user_id) {
-    signinWrapper.classList.remove('signin_active');  // скроем форму авторизации
-    welcome.classList.add('welcome_active');  // покажем блок приветствия
-    userID.textContent = localStorage.user_id;  // укажем user_id в форме приветствия
+    showWelcome()  // покажем блок приветствия
+    userID.textContent = localStorage.user_id;  // укажем user_id
   } else {
     signinWrapper.classList.add('signin_active');  // покажем форму авторизации
   }
+}
+
+
+// — — — — — — — — — — — — — — — — — — —
+// Функция выводит блок приветствия
+// — — — — — — — — — — — — — — — — — — —
+function showWelcome() {
+  signinWrapper.classList.remove('signin_active');  // скроем форму авторизации
+  welcome.classList.add('welcome_active');  // покажем блок приветствия
+
+  // добавим кнопку logout
+  const logoutBtn = document.getElementById('logout__btn');
+  logoutBtn.classList.remove('hidden');
+
+  // нажатие на кнопку logout
+  logoutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    delete localStorage.user_id;  // очистим localStorage
+    logoutBtn.classList.add('hidden');  // скроем кнопку logout
+    welcome.classList.remove('welcome_active');  // скроем блок приветствия
+    signinWrapper.classList.add('signin_active');  // покажем форму авторизации
+  });
 }
