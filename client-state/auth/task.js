@@ -38,7 +38,7 @@ signinBtn.addEventListener('click', (e) => {
 
       // если авторизация прошла успешно
       if (responseParse.success) {
-        showWelcome()  // покажем блок приветствия
+        showWelcome();  // покажем блок приветствия
         userID.textContent = responseParse.user_id;  // укажем user_id
         localStorage.user_id = responseParse.user_id;  // запомним user_id
       } else {
@@ -59,7 +59,7 @@ signinBtn.addEventListener('click', (e) => {
 // — — — — — — — — — — — — — — — — — — —
 function idRestore() {
   if (localStorage.user_id) {
-    showWelcome()  // покажем блок приветствия
+    showWelcome();  // покажем блок приветствия
     userID.textContent = localStorage.user_id;  // укажем user_id
   } else {
     signinWrapper.classList.add('signin_active');  // покажем форму авторизации
