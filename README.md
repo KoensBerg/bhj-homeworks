@@ -25,8 +25,14 @@
   - [Онлайн-читалка](./dom/book-reader)
 
 ### 5. [Работа с HTML-формами](./html-forms/)
+  - [Текстовый чат](./html-forms/chat)
+  - [Дерево интересов](./html-forms/interests)
+  - [Выпадающий список с поиском](./html-forms/autocomplete)
 
 ### 6. [Изменение структуры HTML-документа](./document-structure/)
+  - [Всплывающая подсказка](./document-structure/tooltip)
+  - [Простой список дел](./document-structure/todo)
+  - [Корзина товаров](./document-structure/cart)
 
 ## Блок 3. Работа с состоянием
 
