@@ -2,34 +2,37 @@
 
 ## Блок 1. Основы разработки интерфейсов
 
-### [Возможности JavaScript в браузере](./js-features/)
-  1. [Таймер обратного отсчёта](./js-features/countdown)
-  2. [Игра-кликер](./js-features/cookie-clicker)
-  3. [Игра «Убей кротов»](./js-features/mole-game)
+### 1. [Возможности JavaScript в браузере](./js-features/)
+  [Таймер обратного отсчёта](./js-features/countdown)
+  [Игра-кликер](./js-features/cookie-clicker)
+  [Игра «Убей кротов»](./js-features/mole-game)
 
-### [Способы поиска нужного HTML-элемента](./element-search/)
-  4. [Всплывающие окна](./element-search/popups)
-  5. [Навигационное меню](./element-search/menu)
-  6. [Слайдер](./element-search/slider)
+### 2. [Способы поиска нужного HTML-элемента](./element-search/)
+  [Всплывающие окна](./element-search/popups)
+  [Навигационное меню](./element-search/menu)
+  [Слайдер](./element-search/slider)
 
-### [Объект события](./event-object/)
-  7. [Выпадающие списки](./event-object/dropdown)
-  8. [Соло на клавиатуре](./event-object/keysolo)
-  9. [Управление вкладками](./event-object/tabs)
+### 3. [Объект события](./event-object/)
+  [Выпадающие списки](./event-object/dropdown)
+  [Соло на клавиатуре](./event-object/keysolo)
+  [Управление вкладками](./event-object/tabs)
 
 ## Блок 2. Работа с DOM
 
-### [DOM](./dom/)
+### 4. [DOM](./dom/)
+  [Появление элементов при прокрутке](./dom/reveal)
+  [Ротатор рекламы](./dom/ads)
+  [Онлайн-читалка](./dom/book-reader)
 
-### [Работа с HTML-формами](./html-forms/)
+### 5. [Работа с HTML-формами](./html-forms/)
 
-### [Изменение структуры HTML-документа](./document-structure/)
+### 6. [Изменение структуры HTML-документа](./document-structure/)
 
 ## Блок 3. Работа с состоянием
 
-### [Асинхронные запросы](./async-requests/)
+### 7. [Асинхронные запросы](./async-requests/)
 
-### [Хранение состояния на клиенте](./client-state)
+### 8. [Хранение состояния на клиенте](./client-state)
 
 ## Требования
 
