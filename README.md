@@ -7,26 +7,29 @@
   2. [Игра-кликер](./js-features/cookie-clicker)
   3. [Игра «Убей кротов»](./js-features/mole-game)
 
-### [Способы поиска нужного HTML-элемента.](./element-search/)
+### [Способы поиска нужного HTML-элемента](./element-search/)
   4. [Всплывающие окна](./element-search/popups)
   5. [Навигационное меню](./element-search/menu)
   6. [Слайдер](./element-search/slider)
 
-#### 1.3. [Объект события.](./event-object/)
+### [Объект события](./event-object/)
+  7. [Выпадающие списки](./event-object/dropdown)
+  8. [Соло на клавиатуре](./event-object/keysolo)
+  9. [Управление вкладками](./event-object/tabs)
 
 ## Блок 2. Работа с DOM
 
-#### 2.1. [DOM.](./dom/)
+### [DOM](./dom/)
 
-#### 2.2. [Работа с HTML-формами.](./html-forms/)
+### [Работа с HTML-формами](./html-forms/)
 
-#### 2.3. [Изменение структуры HTML-документа.](./document-structure/)
+### [Изменение структуры HTML-документа](./document-structure/)
 
 ## Блок 3. Работа с состоянием
 
-#### 3.1. [Асинхронные запросы.](./async-requests/)
+### [Асинхронные запросы](./async-requests/)
 
-#### 3.2. [Хранение состояния на клиенте.](./client-state)
+### [Хранение состояния на клиенте](./client-state)
 
 ## Требования
 
