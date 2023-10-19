@@ -7,7 +7,7 @@ const reset = document.getElementById('reset');
 
 
 // восстановим данные из localStorage
-restorEditor();
+editor.value = localStorage.getItem('editor');
 
 
 // запишем новые данные в localStorage
@@ -22,9 +22,3 @@ reset.addEventListener('click', (e) => {
   editor.value = '';
   localStorage.removeItem('editor');
 });
-
-
-// Функция восстанавливает данные из localStorage
-function restorEditor() {
-  editor.value = localStorage.getItem('editor');
-}
