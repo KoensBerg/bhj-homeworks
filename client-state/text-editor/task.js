@@ -12,7 +12,7 @@ restorEditor();
 
 // запишем новые данные в localStorage
 editor.addEventListener('input', () => { // либо 'change' (в зависимости от задачи)
-  localStorage.setItem('editor', JSON.stringify(editor.value.trim()));
+  localStorage.setItem('editor', editor.value.trim());
 });
 
 
@@ -20,17 +20,11 @@ editor.addEventListener('input', () => { // либо 'change' (в зависим
 reset.addEventListener('click', (e) => {
   e.preventDefault();
   editor.value = '';
-  delete localStorage.editor;
+  localStorage.removeItem('editor');
 });
 
 
 // Функция восстанавливает данные из localStorage
 function restorEditor() {
-  if (localStorage.editor) {
-    try {
-      editor.value = JSON.parse(localStorage.getItem('editor'));
-    } catch(e) {
-      return null;
-    }
-  }
+  editor.value = localStorage.getItem('editor');
 }
