@@ -26,6 +26,7 @@ signinBtn.addEventListener('click', (e) => {
   // формируем новый запрос
   const xhr = new XMLHttpRequest();
   xhr.open('POST', "https://students.netoservices.ru/nestjs-backend/auth", true);
+  xhr.responseType = 'json';
 
   // передаём данные формы
   const formData = new FormData(signinForm);
@@ -34,7 +35,7 @@ signinBtn.addEventListener('click', (e) => {
   xhr.onloadend = function () {
     if (xhr.status == 201) {
       console.log('xhr.response:', xhr.response);
-      const responseParse = JSON.parse(xhr.response);
+      const responseParse = xhr.response;
 
       // если авторизация прошла успешно
       if (responseParse.success) {
